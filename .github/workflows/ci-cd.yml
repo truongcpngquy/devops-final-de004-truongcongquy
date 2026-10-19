@@ -38,7 +38,7 @@ jobs:
               exit 1
             fi
           done
-          if [ "$EXAM_CODE" != "005" ] || [ "$MYSQL_DATABASE" != "ptit_hrm_db" ]; then
+          if [ "$EXAM_CODE" != "004" ] || [ "$MYSQL_DATABASE" != "ptit_inventory_db" ]; then
             echo "::error file=student.env::Không được sửa EXAM_CODE và MYSQL_DATABASE"
             exit 1
           fi
