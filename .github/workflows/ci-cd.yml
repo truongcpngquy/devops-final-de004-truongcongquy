@@ -65,8 +65,8 @@ jobs:
         run: |
           set -a; source student.env; set +a
           BASE="http://localhost:${APP_PORT}"
-          # Kiểm tra endpoint $BASE/api/employees trả về JSON (CÓ SẴN, lỗi -> pipeline FAIL)
-          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$BASE/api/employees" | grep -q '"id"'
+          # Kiểm tra endpoint $BASE/api/items trả về JSON (CÓ SẴN, lỗi -> pipeline FAIL)
+          curl -fsS --retry 12 --retry-delay 5 --retry-all-errors "$BASE/api/items" | grep -q '"id"'
           echo "Smoke test OK"
 
       - name: In log khi lỗi
